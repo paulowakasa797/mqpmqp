@@ -1,0 +1,414 @@
+{
+  "schema": 1,
+  "package": "CLAUDE_BREAKOUT_REVIEW_V3_20260919",
+  "created_utc": "2026-09-19T04:58:39.7103431+09:00",
+  "purpose": "Offline final audit only; no SSH, production, trading, notifications, deployment, push or merge",
+  "entrypoint": "START_HERE.md",
+  "final_report": "reports/breakout_continuation_20260919/REPORT_v3.md",
+  "final_decision": "reports/breakout_continuation_20260919/FINAL_DECISION_v3.json",
+  "manifest_excludes": [
+    "BUNDLE_MANIFEST.json"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3529,
+      "sha256": "3e6ab6240dba5e0a8c0a2dd089927b5f11af10a56e23bceceefb086522916828"
+    },
+    {
+      "path": "auto_trading/__init__.py",
+      "bytes": 109,
+      "sha256": "f65f5083d37649d1b1cb3cd2228d8f06943b9d5b85c7c91fe547851a89b0c2b1"
+    },
+    {
+      "path": "auto_trading/__main__.py",
+      "bytes": 3246,
+      "sha256": "00d6c1891af2dd34dba90015a51059403e922c6c3b9532699e477f71d8f8ac75"
+    },
+    {
+      "path": "auto_trading/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 334,
+      "sha256": "14893fdd8ce4800edf5d379fff0df162e279dde580214df6e1c019dbe600fb9b"
+    },
+    {
+      "path": "auto_trading/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 323,
+      "sha256": "fbf6a11d8b276230932109e88baea4fc27e7149c57218ce0eb4a21424539cfd1"
+    },
+    {
+      "path": "auto_trading/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 323,
+      "sha256": "74b485e067cbc257df1e3d8467ed9382e97edd4faa95e14f6f9707f4de266ae9"
+    },
+    {
+      "path": "auto_trading/__pycache__/__main__.cpython-313.pyc",
+      "bytes": 5200,
+      "sha256": "31f9043c1c584826c91918f46cf5e64209f4d59213d2cfdfb2c687c46c63fde6"
+    },
+    {
+      "path": "auto_trading/__pycache__/contracts.cpython-311.pyc",
+      "bytes": 3647,
+      "sha256": "f8431f6bb7b90bef8243215db5519a2450e8c98e5c5d7ce76a2093a146577a38"
+    },
+    {
+      "path": "auto_trading/__pycache__/contracts.cpython-312.pyc",
+      "bytes": 3165,
+      "sha256": "d509fd5c24897e5b8c4053c174969c80007438557bb4a59fc1ed1c1e90946795"
+    },
+    {
+      "path": "auto_trading/__pycache__/contracts.cpython-313.pyc",
+      "bytes": 3129,
+      "sha256": "ce302344e20f2d3f0204944b276890ceca3f23eeae7137fee90a8aa0ddcc76e9"
+    },
+    {
+      "path": "auto_trading/__pycache__/data.cpython-313.pyc",
+      "bytes": 43129,
+      "sha256": "436d327c6d00fba11ed8763d5beceb66a3e26de39a049f123657e3133b204f7b"
+    },
+    {
+      "path": "auto_trading/__pycache__/execution.cpython-313.pyc",
+      "bytes": 39930,
+      "sha256": "8220b3021c7d7f6badfd509a980db0c0978b322080d82c77862005e11792d346"
+    },
+    {
+      "path": "auto_trading/__pycache__/research_gate.cpython-313.pyc",
+      "bytes": 26965,
+      "sha256": "2b819f61bbed81a8b14deb684b5f032d18b894a3aea663a5d9fa4402b7cbc5ad"
+    },
+    {
+      "path": "auto_trading/__pycache__/runtime.cpython-313.pyc",
+      "bytes": 42849,
+      "sha256": "453da0b54f6448514d507bff44406e316af9d9adb6f937700e54d72c7b58ad3c"
+    },
+    {
+      "path": "auto_trading/__pycache__/strategy.cpython-313.pyc",
+      "bytes": 37088,
+      "sha256": "a5b3a9803ec867d9b29c24f7a009f242f4db76bc3ad6efaae97750211918c00f"
+    },
+    {
+      "path": "auto_trading/contracts.py",
+      "bytes": 1788,
+      "sha256": "35107cd015d8f9a725e074e46680f8f897f1c865f74bfb3dd54b9b0b9701df46"
+    },
+    {
+      "path": "auto_trading/data.py",
+      "bytes": 29894,
+      "sha256": "5e273baec092f54ed4563ddd5c9daceb52cf6336fabea45a853d8ed805b53ba1"
+    },
+    {
+      "path": "auto_trading/execution.py",
+      "bytes": 32647,
+      "sha256": "6c5b829d249619048b2bec28f7da10796d19aef915c77ffd2639a7c1f47576ae"
+    },
+    {
+      "path": "auto_trading/profile.json",
+      "bytes": 2387,
+      "sha256": "0a0da535f08caa7da84dbf8fc5cdab838d44bc1ebdb755b3cfb012a22e46e09f"
+    },
+    {
+      "path": "auto_trading/README.md",
+      "bytes": 8848,
+      "sha256": "3883fb665e76341aee01168ad1d4da95dddc03b3e1c13919fe6e6278a4aecea3"
+    },
+    {
+      "path": "auto_trading/research_gate.py",
+      "bytes": 19840,
+      "sha256": "76add9925c109bde1b381716777ad16f77e019a8e3b4ef55463226173f19e2e8"
+    },
+    {
+      "path": "auto_trading/runtime.py",
+      "bytes": 30437,
+      "sha256": "682ed8fc08616605a9fdd7ddaad4e15d6cc9db2f8824c1e160ded100b700bd27"
+    },
+    {
+      "path": "auto_trading/strategy.py",
+      "bytes": 25690,
+      "sha256": "80d34c9e3c12581ed30c010178a9d0cb016da61e027dd4167589dbfbbd306732"
+    },
+    {
+      "path": "feature_engineering.py",
+      "bytes": 4346,
+      "sha256": "1b1fa2c1f8c17c2962756c55801c2e64cac3c574c9eec593a35e0ec554b31f12"
+    },
+    {
+      "path": "position_data_recovery_gate.py",
+      "bytes": 79643,
+      "sha256": "38ad630e4a5fca7761a6cd3b2ac051d153c58ac67b9aa14c2edbd128a45a7bab"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/acquire.py",
+      "bytes": 7006,
+      "sha256": "6d1690c4ccaf3801f740f03330bc9ed45a5e52f182bf090eb46ee8528d079c1b"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/audit_03.json",
+      "bytes": 20251,
+      "sha256": "dcbae67665983b19512b56a818f2ff33901973342391532f925b0788a33b9a85"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/audit_command_03.json",
+      "bytes": 4389,
+      "sha256": "bd94d6ada81d10b81d6ef80ce75c8a4363fe5bf4b6a35b1ba3ab4f672a3efeff"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/audit.py",
+      "bytes": 14186,
+      "sha256": "65fc139fa4935e9a1f92ea3e90f3a041f1298264a8811cfe910d5e55f9d9aeaf"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/changes_v3.patch",
+      "bytes": 101312,
+      "sha256": "58be7f10baf6e1c701745c9b57f2770810247c4e9db7353fc3105ad6df9486dc"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/CLAUDE_REVIEW_INSTRUCTION_V3.md",
+      "bytes": 5837,
+      "sha256": "0c8d40b90c0c1139c33157f30d266de2d2e0d876f343262528adba4aa6589f85"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/data_locations.json",
+      "bytes": 63960,
+      "sha256": "72ff20e108922516164c122b58dcc4d06deb0712fda16baefe5306fd5988d56d"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/deliver.py",
+      "bytes": 9899,
+      "sha256": "b0363c739aa06957a641a91f927e8e52128ac182c4c142e5371292c3529c3574"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/engine.py",
+      "bytes": 18987,
+      "sha256": "fb1be71ddf50a3c09ab32905c38e866b54952ecf31025d241a0e7119ffe9a19a"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evaluate_command_01.json",
+      "bytes": 3576,
+      "sha256": "5c604fa0ea0fb00586383adcf67157a3e00acecf3342d643613143d6a14395d4"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evaluate_stale_source.json",
+      "bytes": 2240,
+      "sha256": "20e3d7fe86d8715932f185c67139850242b1b7d46362b16325931151cc0d6fee"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evaluation_01/summary.json",
+      "bytes": 30274,
+      "sha256": "e3e4fbfa04943376db5987853aa20f603fe77e2d9183b09218ef8d408e2270a1"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evaluation_01/trades_1.0.jsonl",
+      "bytes": 580156,
+      "sha256": "31df52e9ee68a4a59484c74bf6acef5912f7ca9bc4d37321aaed7a4ea84899bd"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evaluation_01/trades_2.0.jsonl",
+      "bytes": 578219,
+      "sha256": "c936c491e6d50dc4b507b9d6abd96953c0820c050e8d51cdf45318ea46441aad"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/BTCUSDT_5m.json",
+      "bytes": 1928487,
+      "sha256": "826bac01ae6c1521e27f158d7cd9506449e7e97955eb7358250f7947226c0933"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/ETHUSDT_5m.json",
+      "bytes": 1916909,
+      "sha256": "63cdcd60865c72c10b28007089d6d794f453b2184147eb09f8d940b8b9d3a1c2"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/funding/BTCUSDT.json",
+      "bytes": 13699,
+      "sha256": "24b6e2d45475aac89713baefede265ff345c3630ad6be93fc5808f603ce8a12c"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/funding/ETHUSDT.json",
+      "bytes": 13614,
+      "sha256": "7f7db4ff9d20001ad033a12b45612d48a385a76b93cd2ee9e23bdd4f2f3b097d"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/funding/SOLUSDT.json",
+      "bytes": 13472,
+      "sha256": "ef3875c9c32ecc50de45b377de559dfa08519329e85d28beaa3ba513076e6526"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/manifest.json",
+      "bytes": 10861,
+      "sha256": "f4f0814343a61e30a081b46519e92b1174603407960464796e258e5ff747f556"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/BTCUSDT/5m/BTCUSDT-5m-2026-08.receipt.json",
+      "bytes": 331,
+      "sha256": "84395c14c6d1f1118112e9b6616329ae6aee65e9f5523f9df90c0e292604e6dd"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/BTCUSDT/5m/BTCUSDT-5m-2026-08.zip",
+      "bytes": 397158,
+      "sha256": "14fd408e5d2902665c66b701e861b173568b66399e3fa462b94c766d209567d1"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/BTCUSDT/5m/BTCUSDT-5m-2026-08.zip.CHECKSUM",
+      "bytes": 89,
+      "sha256": "dfb20eb03fe89efc7cd22cf7b47a093e8765a8575a63767d4f4b6dac3fa96122"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/ETHUSDT/5m/ETHUSDT-5m-2026-08.receipt.json",
+      "bytes": 331,
+      "sha256": "2875b5a8c5001cd02e9fee33f6bec0dc06c8281cfd592aa9c2a5ed0ef768d7b3"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/ETHUSDT/5m/ETHUSDT-5m-2026-08.zip",
+      "bytes": 407196,
+      "sha256": "c7ac44cb1ac58dd231b1a94c9d68907e2b3a8079dbf2dd8a5e744a6234766d47"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/ETHUSDT/5m/ETHUSDT-5m-2026-08.zip.CHECKSUM",
+      "bytes": 89,
+      "sha256": "10986700626cfbd98640d9f5714f9d2f24e15761386a0efb01ddcc1924e65f8c"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/SOLUSDT/5m/SOLUSDT-5m-2026-08.receipt.json",
+      "bytes": 331,
+      "sha256": "a9afe8b600facf4257839d8695ff64e9e33b81a9f4babbd53aa6086958502c17"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/SOLUSDT/5m/SOLUSDT-5m-2026-08.zip",
+      "bytes": 369992,
+      "sha256": "45a0adfe5568c062a1f218b3e1761a9637f4d7801db70a6ec321dfb389b08d32"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/raw/monthly/klines/SOLUSDT/5m/SOLUSDT-5m-2026-08.zip.CHECKSUM",
+      "bytes": 89,
+      "sha256": "8a6eda212ae4d82853de1b04a24f6ea0d2bcf45f1721311c710965d6153be4c0"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/evidence/SOLUSDT_5m.json",
+      "bytes": 1924301,
+      "sha256": "02f66949ba70dd75cd61db4eb1239faa3335701ac191eb17e9352e98ec26bbee"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/FINAL_DECISION_v3.json",
+      "bytes": 1751,
+      "sha256": "bb785300e90e37bae98ef0803e1e641a8b156fd28c22f57f5ea3e30ad80d74ed"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/freeze.json",
+      "bytes": 3964,
+      "sha256": "1ba0f72d7c97dd67ef3df65f70e48987f6dffbee301fff9980415e68014c82cd"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/legacy_csv_coverage.json",
+      "bytes": 3048,
+      "sha256": "937918f474bfc72dd8cf5f9fdd0170979e6f01b7571aa4b46490c5426cfd4ab4"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/protocol.json",
+      "bytes": 908,
+      "sha256": "da6b4bd57ac14edeecd771bcfbe77d10effcfd2e20b1f2fec45f61fa629ba677"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/PROTOCOL.md",
+      "bytes": 4036,
+      "sha256": "82d69978fc1c8174d105330124a1744d8f949017127bd6f81b0c3b8e948136be"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/repeat_command_01.json",
+      "bytes": 4468,
+      "sha256": "81473e1dab12c73e8c0a0034de8699c38c26eeb27e7fc65bc794dc7bd5cc0ecd"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/replay_02/decisions.jsonl",
+      "bytes": 19516136,
+      "sha256": "a4a103eddd4f9a6880c83bc4dcf8844cb1e4f427df1b4239a88dd27a6d05b75b"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/replay_02/summary.json",
+      "bytes": 3436,
+      "sha256": "b7b14dbe2806bd92c9efadd7d042142f1ac2cce67fe622feff681021b5a0277e"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/replay_command_02.json",
+      "bytes": 4464,
+      "sha256": "ebf98f4da4ab6a99df7092d57cf5187b0e4984b63b4bbbbb37aad39eb0125e51"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/replay_repeat/decisions.jsonl",
+      "bytes": 19516136,
+      "sha256": "a4a103eddd4f9a6880c83bc4dcf8844cb1e4f427df1b4239a88dd27a6d05b75b"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/replay_repeat/summary.json",
+      "bytes": 3436,
+      "sha256": "cde652032e46395e57fd4f95169bb5a267a65b69e6a91506b61efc5ccf907b73"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/REPORT_v3.md",
+      "bytes": 5892,
+      "sha256": "d26824d9b871652a2050c3853d25218913f6f8b4fbbe65fe469c844b090f48dc"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/REVIEW.md",
+      "bytes": 2365,
+      "sha256": "f6163486f541afd19003a1d36f3487fe30eac72ab8047a1b47969752d4312bf8"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/run.py",
+      "bytes": 11272,
+      "sha256": "0c109db674a857d4bf0cec8c96a9634fb57f92630117973a5d5ff39607d1ccd0"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/test_audit.py",
+      "bytes": 3369,
+      "sha256": "bbe2d61bf19a654a76e20303fda265151f9dc61a15d8e38ab5ad26950bfc1b3e"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/test_engine.py",
+      "bytes": 22262,
+      "sha256": "7de349bcbd8878f6d537723b41d225472ce0d81791448f956bc205562abb549f"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/test_run.py",
+      "bytes": 4703,
+      "sha256": "443cad1fbbea5eb5945b51f7fd6d0f4759d77d80336f6b1135e01b57d57666e1"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/tests_final_03.json",
+      "bytes": 15516,
+      "sha256": "4c6b9e6563c3cc522e96361bb080e988e2b91434edfcd5993ea1dd0d9023222d"
+    },
+    {
+      "path": "reports/breakout_continuation_20260919/verify.py",
+      "bytes": 1922,
+      "sha256": "eca057bf6a8f32b08bdbf4e0c4ffb455d286d95b1adee8d69f29c4955f0f86fa"
+    },
+    {
+      "path": "reports/pump_r1_review_20260919/evidence/baseline/candidate/rules.py",
+      "bytes": 12891,
+      "sha256": "0c4a5f27002ab23a0961698425d72daf4a270c1bd45354e9159c114073334039"
+    },
+    {
+      "path": "reports/pump_r1_review_20260919/replay.py",
+      "bytes": 9535,
+      "sha256": "4cc748e319ba27ffb460aeed0e289c65b10097035975782c24ac847cc3a583d8"
+    },
+    {
+      "path": "research_acceleration/binance_comparison_audit.py",
+      "bytes": 11605,
+      "sha256": "07ca5c075c1a6f0cef6be0fcab0f274adfdd9a6a6963e7e67849096ed4175137"
+    },
+    {
+      "path": "research_acceleration/binance_comparison_data.py",
+      "bytes": 29364,
+      "sha256": "3ed4f75f6493c0360b04e2c1ae3950be8473ff354e03f0fdcb1068866d99ebf4"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 5837,
+      "sha256": "0c8d40b90c0c1139c33157f30d266de2d2e0d876f343262528adba4aa6589f85"
+    },
+    {
+      "path": "tests/test_binance_comparison_data.py",
+      "bytes": 12026,
+      "sha256": "1731c75f1163425a82cc6bd2438c09563ba783e75c0caaa6160b83d5299c8162"
+    }
+  ]
+}
