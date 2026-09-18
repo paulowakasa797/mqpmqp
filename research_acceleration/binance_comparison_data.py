@@ -33,6 +33,16 @@ SYMBOLS = ('BTCUSDT', 'ETHUSDT', 'SOLUSDT')
 STEPS = {'1m': 60000, '5m': 300000, '15m': 900000, '1h': 3600000}
 KINDS = ('klines', 'markPriceKlines', 'indexPriceKlines', 'premiumIndexKlines', 'metrics', 'bookDepth', 'bookTicker')
 KLINE_HEADER = ('open_time', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_volume', 'count', 'taker_buy_volume', 'taker_buy_quote_volume', 'ignore')
+METRICS_HEADER = (
+    'create_time',
+    'symbol',
+    'sum_open_interest',
+    'sum_open_interest_value',
+    'count_toptrader_long_short_ratio',
+    'sum_toptrader_long_short_ratio',
+    'count_long_short_ratio',
+    'sum_taker_long_short_vol_ratio',
+)
 
 
 def ms(value: str) -> int:
@@ -198,7 +208,6 @@ def validate_archive(spec: ArchiveSpec, payload: bytes, checksum: bytes, window:
     if spec.kind == 'metrics':
         # Official ZIPs can contain unsorted source rows. Preserve their bytes and
         # audit order explicitly; the strict legacy parser and its gates stay intact.
-        from position_data_recovery_gate import METRICS_HEADER
         table = csv.reader(io.StringIO(content.decode('utf-8-sig')))
         if tuple(next(table)) != METRICS_HEADER:
             raise ValueError('METRICS_SCHEMA_MISMATCH')
@@ -410,8 +419,6 @@ def collect(*, max_requests=900, max_mib=256, seconds=900, workers=3) -> Path:
               'historical_first_availability': 'UNKNOWN', 'max_requests': max_requests, 'max_mib': max_mib, 'seconds': seconds}
     immutable_write(folder / 'protocol.json', json.dumps(frozen, indent=2).encode())
     specs, results = plan(), []
-    # Import the existing offline metrics parser once before concurrent use.
-    import position_data_recovery_gate  # noqa: F401
     pool = ThreadPoolExecutor(max_workers=workers)
     try:
         try:

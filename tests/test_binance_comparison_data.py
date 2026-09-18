@@ -9,8 +9,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 from research_acceleration.binance_comparison_data import (
-    ArchiveSpec, BudgetExceeded, KLINE_HEADER, PublicReader, acquire, immutable_write,
-    ms, plan, sha, validate_archive, verified_csv,
+    ArchiveSpec, BudgetExceeded, KLINE_HEADER, METRICS_HEADER, PublicReader, acquire,
+    immutable_write, ms, plan, sha, validate_archive, verified_csv,
 )
 
 
@@ -132,7 +132,6 @@ class BinanceComparisonDataTests(unittest.TestCase):
         self.assertIn(ArchiveSpec('metrics', 'BTCUSDT', '2026-07-01'), specs)
 
     def metrics_archive(self):
-        from position_data_recovery_gate import METRICS_HEADER
         self.spec = ArchiveSpec('metrics', 'BTCUSDT', '2026-05-18')
         rows = [['2026-05-18 00:05:00', 'BTCUSDT', 100, 10000, 1, 1, 1, 1],
                 ['2026-05-18 00:00:00', 'BTCUSDT', 101, 10100, 1, 1, 1, 1]]

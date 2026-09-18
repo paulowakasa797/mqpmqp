@@ -380,8 +380,18 @@ class Simulator:
         previous = self.state["processed_bars"].get(key)
         if previous is not None and start <= previous:
             return []
+        interval = end - start
+        gap = previous is not None and start != previous + interval
         self.state["processed_bars"][key] = start
         events = []
+        if gap:
+            events.append(self._event("DATA_INSUFFICIENT", as_of, reason="EXECUTION_BAR_GAP", symbol=symbol))
+            for order in self._active():
+                if order["symbol"] == symbol:
+                    order["status"] = "CANCELLED"
+                    order["cancelled_at"] = as_of
+                    events.append(self._event("RISK_LIMIT", as_of, order_id=order["order_id"],
+                                             reason="EXECUTION_BAR_GAP"))
         self._day(start)
         quote_ok = self._quote_ok(quote, start, symbol)
         if quote_ok:
@@ -395,6 +405,8 @@ class Simulator:
             elif self._day(start):
                 order["status"] = "CANCELLED"
                 events.append(self._event("RISK_LIMIT", as_of, order_id=order["order_id"], reason="DAILY_LOSS_LIMIT"))
+            elif gap:
+                continue
             elif end-start == self.profile["execution_interval_ms"] and start > order["eligible_after"]:
                 if quote_ok:
                     events.append(self._fill(order, bar, quote, as_of))

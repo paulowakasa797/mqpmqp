@@ -9,7 +9,7 @@ Bar = Dict[str, float | int]
 
 def ema(values: Sequence[float], period: int) -> List[Optional[float]]:
     out: List[Optional[float]] = [None] * len(values)
-    if len(values) < period:
+    if period < 1 or len(values) < period:
         return out
     seed = sum(values[:period]) / period
     alpha = 2.0 / (period + 1)
@@ -23,7 +23,7 @@ def ema(values: Sequence[float], period: int) -> List[Optional[float]]:
 
 def atr(bars: Sequence[Bar], period: int = 14) -> List[Optional[float]]:
     out: List[Optional[float]] = [None] * len(bars)
-    if len(bars) < period + 1:
+    if period < 1 or len(bars) < period + 1:
         return out
     tr_values: List[float] = []
     for idx, bar in enumerate(bars):
@@ -44,6 +44,8 @@ def atr(bars: Sequence[Bar], period: int = 14) -> List[Optional[float]]:
 
 def rolling_mean(values: Sequence[float], lookback: int) -> List[Optional[float]]:
     out: List[Optional[float]] = [None] * len(values)
+    if lookback < 1:
+        return out
     total = 0.0
     for idx, value in enumerate(values):
         total += value

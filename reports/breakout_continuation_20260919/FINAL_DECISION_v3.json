@@ -1,0 +1,27 @@
+{
+  "schema": "FINAL_DECISION_v3",
+  "package": "CLAUDE_BREAKOUT_REVIEW_V3_20260919",
+  "reviewer": "cursor-cloud-agent",
+  "reviewed_utc": "2026-09-18T20:11:00Z",
+  "source": "Google Drive 32-file upload; 20 sources imported, 12 pyc skipped",
+  "PACKAGE_INTEGRITY": "BLOCKED",
+  "ENGINEERING": "FAIL",
+  "DATA_CHAIN": "BLOCKED",
+  "ARITHMETIC": "BLOCKED",
+  "LEAKAGE_CONTROL": "PASS",
+  "BREAKOUT_CANDIDATE": "INCONCLUSIVE",
+  "GAIN_VS_ORIGINAL_R1": "INCONCLUSIVE",
+  "DEPLOYMENT": "NOT_AUTHORIZED",
+  "CLAUDE_REVIEW": "COMPLETE",
+  "production_allowed": false,
+  "research_gate": "REFUSED_NO_REAL_MARKET_REPORT",
+  "notes": [
+    "Missing reports/breakout_continuation_20260919 engine, freeze, protocol, evidence archives, replay ledgers, and the original 47 unittests.",
+    "Cannot recompute 522 trades or prove freeze-before-download chronology.",
+    "Candidate v1 runner remains production_allowed=false; paper mode is fail-closed.",
+    "Do not treat structural matches or directional close labels as trade PnL.",
+    "Relative gain versus original R1 stays INCONCLUSIVE without historical quotes and receipts."
+  ],
+  "imported_profile_sha256": "0a0da535f08caa7da84dbf8fc5cdab838d44bc1ebdb755b3cfb012a22e46e09f",
+  "start_here_sha256": "0c8d40b90c0c1139c33157f30d266de2d2e0d876f343262528adba4aa6589f85"
+}

@@ -16,8 +16,12 @@ from itertools import combinations
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 
-import numpy as np
-import pandas as pd
+try:
+    import numpy as np
+    import pandas as pd
+except ModuleNotFoundError:  # stdlib research path does not install pandas/numpy
+    np = None  # type: ignore[assignment]
+    pd = None  # type: ignore[assignment]
 
 
 ASSETS = ("BTCUSDT", "ETHUSDT", "SOLUSDT")
@@ -2311,6 +2315,8 @@ def parse_args(
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    if pd is None or np is None:
+        raise RuntimeError("PANDAS_NUMPY_REQUIRED_FOR_RECOVERY_GATE")
     args = parse_args(argv)
     if args.command == "status":
         payload = current_recovery_status(ROOT)

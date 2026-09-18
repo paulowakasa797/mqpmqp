@@ -57,8 +57,11 @@ def _visible(item: Any, as_of: int) -> bool:
         return True  # preserve malformed evidence for explicit rejection
     available = item.get("available_at")
     end = item.get("period_end")
+    received = item.get("received_at")
+    estimated = item.get("availability_estimated") is True
     return not ((_timestamp(available) and available > as_of)
-                or (_timestamp(end) and end > as_of))
+                or (_timestamp(end) and end > as_of)
+                or (not estimated and _timestamp(received) and received > as_of))
 
 
 def visible_snapshot(snapshot: dict, as_of: int, profile: dict | None = None) -> dict:
@@ -113,6 +116,8 @@ def _record_error(item: Any, symbol: str, as_of: int) -> bool:
     if item["available_at"] < item["event_time"] or item["received_at"] < item["event_time"]:
         return True
     if not item.get("availability_estimated") and item["available_at"] < item["received_at"]:
+        return True
+    if not item.get("availability_estimated") and item["received_at"] > as_of:
         return True
     return False
 

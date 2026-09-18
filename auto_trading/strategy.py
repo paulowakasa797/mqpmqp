@@ -159,9 +159,11 @@ def assess_entry(side: str, entry: float, stop: float, targets: list[float], pro
     stop_cost = (entry+stop)*fee + stop*slip + entry*funding
     target_costs = [(entry+t)*fee + t*slip + entry*funding for t in targets]
     risk = abs(entry-stop) + stop_cost
+    if stop_cost >= abs(entry-stop):
+        reasons.append("COST_DOMINATES_STRUCTURAL_RISK")
     rewards = [distance-cost for distance,cost in zip(distances,target_costs)]
-    rr = rewards[0]/risk
-    if rr < profile["min_net_rr"]:
+    rr = rewards[0]/risk if risk else float("nan")
+    if not math.isfinite(rr) or rr < profile["min_net_rr"]:
         reasons.append("RR_INSUFFICIENT")
     out.update(ok=not reasons, net_rr=rr, risk_per_unit=risk, net_reward=rewards[0],
                net_rewards=rewards, net_rrs=[reward/risk for reward in rewards],

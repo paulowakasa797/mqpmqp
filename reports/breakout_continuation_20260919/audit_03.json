@@ -1,0 +1,88 @@
+{
+  "schema": "audit_03",
+  "package": "CLAUDE_BREAKOUT_REVIEW_V3_20260919",
+  "status": "PACKAGE_INCOMPLETE_FAIL_CLOSED",
+  "production_allowed": false,
+  "python": "3.12.3",
+  "commands": {
+    "available_tests": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "ran": 50,
+      "failures": 0,
+      "errors": 0
+    },
+    "declared_engine_tests": {
+      "command": "python -B -m unittest -v reports.breakout_continuation_20260919.test_engine reports.breakout_continuation_20260919.test_run reports.breakout_continuation_20260919.test_audit",
+      "exit_code": 1,
+      "ran": 0,
+      "reason": "modules absent from Drive upload; not recorded as assertion failures"
+    },
+    "paper_cli": {
+      "command": "python -m auto_trading paper --run paper-refused",
+      "exit_code": 2,
+      "status": "REFUSED",
+      "reason_prefix": "RESEARCH_GATE_REFUSED"
+    }
+  },
+  "integrity": {
+    "manifest_files": 80,
+    "pyc_skipped": 12,
+    "source_present_hash_matched_at_import": 19,
+    "source_missing": 49,
+    "drive_upload_count": 32,
+    "freeze_json": "MISSING",
+    "protocol_json": "MISSING",
+    "replay_02": "MISSING",
+    "evaluation_01": "MISSING",
+    "official_5m_archives": "MISSING"
+  },
+  "findings": [
+    {
+      "severity": "blocker",
+      "id": "MISSING_BREAKOUT_EVIDENCE",
+      "path": "BUNDLE_MANIFEST.json",
+      "impact": "Cannot replay the declared window or recompute 522 trades",
+      "fix": "Supply the missing evidence tree; do not fabricate the 2026-08-02..2026-09-01 gap"
+    },
+    {
+      "severity": "high",
+      "id": "PANDAS_IMPORT_FOR_METRICS_HEADER",
+      "path": "research_acceleration/binance_comparison_data.py",
+      "impact": "Stdlib-only claim was false; three comparison tests could not import",
+      "fix": "Local METRICS_HEADER; optional pandas in position_data_recovery_gate.py"
+    },
+    {
+      "severity": "high",
+      "id": "RECEIVED_AT_NOT_IN_ASOF_FILTER",
+      "path": "auto_trading/data.py",
+      "impact": "validate_snapshot could accept bars received after the decision clock",
+      "fix": "Hide non-estimated records with received_at > as_of"
+    },
+    {
+      "severity": "high",
+      "id": "EXECUTION_BAR_GAP_SILENT",
+      "path": "auto_trading/execution.py",
+      "impact": "Working entries could fill after an unobserved minute",
+      "fix": "Emit EXECUTION_BAR_GAP and cancel working orders"
+    },
+    {
+      "severity": "medium",
+      "id": "COST_DOMINATES_TIGHT_STOP",
+      "path": "auto_trading/strategy.py",
+      "impact": "Fixed bps costs can exceed structural stop distance on small ATR",
+      "fix": "Reject COST_DOMINATES_STRUCTURAL_RISK; do not retune profile.json"
+    }
+  ],
+  "leakage_control": {
+    "candidate_pivots_require_right_wing": true,
+    "current_breakout_bar_excluded_from_pivot_source": true,
+    "r1_closed_bars_reject_future_klines": true,
+    "historical_first_availability": "UNKNOWN"
+  },
+  "original_r1": {
+    "strict_fills": "BLOCKED",
+    "execution_authorized_on_rule_match": false,
+    "gain_vs_candidate": "INCONCLUSIVE"
+  }
+}

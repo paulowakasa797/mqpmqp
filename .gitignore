@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+reports/auto_trading_runs/
+reports/auto_trading_comparison_v1/runs/
+reports/auto_trading_comparison_v1/audits/

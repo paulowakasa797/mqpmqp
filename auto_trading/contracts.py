@@ -14,7 +14,10 @@ def digest(value: Any) -> str:
 
 
 def load_profile() -> dict:
-    return json.loads(Path(__file__).with_name("profile.json").read_text(encoding="utf-8"))
+    profile = json.loads(Path(__file__).with_name("profile.json").read_text(encoding="utf-8"))
+    if profile.get("production_allowed") is not False:
+        raise ValueError("LIVE_FORBIDDEN: invalid profile")
+    return profile
 
 
 def record(data: dict, event_time: int, received_at: int, source_endpoint: str,

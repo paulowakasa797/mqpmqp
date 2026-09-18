@@ -1,0 +1,272 @@
+{
+  "schema": "tests_final_03",
+  "python": "3.12.3",
+  "note": "Original 47 engine tests were not present. This file records the stdlib suite that can actually run, plus the missing-module engine invocation.",
+  "available_suite": {
+    "command": "python -B -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "ran": 50,
+    "failures": 0,
+    "errors": 0,
+    "tests": [
+      {
+        "id": "test_load_profile_stays_research_only",
+        "case": "test_auto_trading_cli.CliSandboxTests.test_load_profile_stays_research_only",
+        "status": "PASS"
+      },
+      {
+        "id": "test_paper_without_gate_returns_refused_and_touches_no_network",
+        "case": "test_auto_trading_cli.CliSandboxTests.test_paper_without_gate_returns_refused_and_touches_no_network",
+        "status": "PASS"
+      },
+      {
+        "id": "test_replay_is_offline_and_ordered",
+        "case": "test_auto_trading_cli.CliSandboxTests.test_replay_is_offline_and_ordered",
+        "status": "PASS"
+      },
+      {
+        "id": "test_run_directory_cannot_escape_research_output",
+        "case": "test_auto_trading_cli.CliSandboxTests.test_run_directory_cannot_escape_research_output",
+        "status": "PASS"
+      },
+      {
+        "id": "test_bar_gap_cancels_working_entry_and_does_not_fill",
+        "case": "test_auto_trading_execution.ExecutionTests.test_bar_gap_cancels_working_entry_and_does_not_fill",
+        "status": "PASS"
+      },
+      {
+        "id": "test_production_flag_stays_false_on_every_fill_event",
+        "case": "test_auto_trading_execution.ExecutionTests.test_production_flag_stays_false_on_every_fill_event",
+        "status": "PASS"
+      },
+      {
+        "id": "test_same_bar_stop_is_taken_before_take_profit",
+        "case": "test_auto_trading_execution.ExecutionTests.test_same_bar_stop_is_taken_before_take_profit",
+        "status": "PASS"
+      },
+      {
+        "id": "test_live_env_switch_is_refused",
+        "case": "test_auto_trading_research_gate.ResearchGateTests.test_live_env_switch_is_refused",
+        "status": "PASS"
+      },
+      {
+        "id": "test_missing_report_is_fail_closed",
+        "case": "test_auto_trading_research_gate.ResearchGateTests.test_missing_report_is_fail_closed",
+        "status": "PASS"
+      },
+      {
+        "id": "test_mutated_production_profile_is_refused",
+        "case": "test_auto_trading_research_gate.ResearchGateTests.test_mutated_production_profile_is_refused",
+        "status": "PASS"
+      },
+      {
+        "id": "test_require_mode_paper_refuses_without_artifacts",
+        "case": "test_auto_trading_research_gate.ResearchGateTests.test_require_mode_paper_refuses_without_artifacts",
+        "status": "PASS"
+      },
+      {
+        "id": "test_synthetic_evidence_cannot_open_paper",
+        "case": "test_auto_trading_research_gate.ResearchGateTests.test_synthetic_evidence_cannot_open_paper",
+        "status": "PASS"
+      },
+      {
+        "id": "test_assess_entry_keeps_fee_slippage_and_funding_on_both_sides",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_assess_entry_keeps_fee_slippage_and_funding_on_both_sides",
+        "status": "PASS"
+      },
+      {
+        "id": "test_current_breakout_bar_is_excluded_from_pivot_confirmation",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_current_breakout_bar_is_excluded_from_pivot_confirmation",
+        "status": "PASS"
+      },
+      {
+        "id": "test_future_received_bar_is_hidden_from_decision",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_future_received_bar_is_hidden_from_decision",
+        "status": "PASS"
+      },
+      {
+        "id": "test_market_regime_is_unknown_without_benchmarks",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_market_regime_is_unknown_without_benchmarks",
+        "status": "PASS"
+      },
+      {
+        "id": "test_pivot_is_unknown_until_right_wing_closes",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_pivot_is_unknown_until_right_wing_closes",
+        "status": "PASS"
+      },
+      {
+        "id": "test_tight_stop_is_rejected_when_fees_dominate_structural_risk",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_tight_stop_is_rejected_when_fees_dominate_structural_risk",
+        "status": "PASS"
+      },
+      {
+        "id": "test_unknown_regime_never_opens_an_entry_path",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_unknown_regime_never_opens_an_entry_path",
+        "status": "PASS"
+      },
+      {
+        "id": "test_validate_snapshot_accepts_the_fixture_and_rejects_a_gap",
+        "case": "test_auto_trading_strategy.StrategyCausalityTests.test_validate_snapshot_accepts_the_fixture_and_rejects_a_gap",
+        "status": "PASS"
+      },
+      {
+        "id": "test_budget_and_private_endpoint_refused_without_network",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_budget_and_private_endpoint_refused_without_network",
+        "status": "PASS"
+      },
+      {
+        "id": "test_checksum_mismatch_rejects_before_parsing",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_checksum_mismatch_rejects_before_parsing",
+        "status": "PASS"
+      },
+      {
+        "id": "test_checksum_must_bind_exact_filename",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_checksum_must_bind_exact_filename",
+        "status": "PASS"
+      },
+      {
+        "id": "test_duplicate_rows_cannot_inflate_coverage",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_duplicate_rows_cannot_inflate_coverage",
+        "status": "PASS"
+      },
+      {
+        "id": "test_finite_values_and_taker_volume_bounds",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_finite_values_and_taker_volume_bounds",
+        "status": "PASS"
+      },
+      {
+        "id": "test_fixed_plan_is_unique_and_contains_existing_metrics_window",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_fixed_plan_is_unique_and_contains_existing_metrics_window",
+        "status": "PASS"
+      },
+      {
+        "id": "test_gaps_are_reported_without_fabrication",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_gaps_are_reported_without_fabrication",
+        "status": "PASS"
+      },
+      {
+        "id": "test_hard_supervisor_terminates_and_reaps_a_stalled_child",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_hard_supervisor_terminates_and_reaps_a_stalled_child",
+        "status": "PASS"
+      },
+      {
+        "id": "test_interrupt_cancels_reader_before_pool_shutdown",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_interrupt_cancels_reader_before_pool_shutdown",
+        "status": "PASS"
+      },
+      {
+        "id": "test_invalid_ohlc_is_rejected",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_invalid_ohlc_is_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_local_artifact_cannot_be_overwritten",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_local_artifact_cannot_be_overwritten",
+        "status": "PASS"
+      },
+      {
+        "id": "test_missing_execution_data_blocks_all_three_groups_without_zero_pnl",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_missing_execution_data_blocks_all_three_groups_without_zero_pnl",
+        "status": "PASS"
+      },
+      {
+        "id": "test_missing_row_field_is_rejected",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_missing_row_field_is_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_negative_premium_is_valid_but_negative_trade_price_is_not",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_negative_premium_is_valid_but_negative_trade_price_is_not",
+        "status": "PASS"
+      },
+      {
+        "id": "test_nonmatching_legacy_cache_downloads_new_public_copy_and_preserves_old",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_nonmatching_legacy_cache_downloads_new_public_copy_and_preserves_old",
+        "status": "PASS"
+      },
+      {
+        "id": "test_official_metrics_raw_order_is_audited_without_rewriting",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_official_metrics_raw_order_is_audited_without_rewriting",
+        "status": "PASS"
+      },
+      {
+        "id": "test_partial_candle_and_microsecond_time_are_rejected",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_partial_candle_and_microsecond_time_are_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_real_source_times_are_not_promoted_to_historical_availability",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_real_source_times_are_not_promoted_to_historical_availability",
+        "status": "PASS"
+      },
+      {
+        "id": "test_slow_stream_rechecks_absolute_deadline_between_single_reads",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_slow_stream_rechecks_absolute_deadline_between_single_reads",
+        "status": "PASS"
+      },
+      {
+        "id": "test_timezone_offset_preserves_the_actual_instant",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_timezone_offset_preserves_the_actual_instant",
+        "status": "PASS"
+      },
+      {
+        "id": "test_zip_traversal_member_is_never_extracted",
+        "case": "test_binance_comparison_data.BinanceComparisonDataTests.test_zip_traversal_member_is_never_extracted",
+        "status": "PASS"
+      },
+      {
+        "id": "test_invalid_periods_do_not_raise_or_invent_values",
+        "case": "test_feature_engineering.FeatureEngineeringTests.test_invalid_periods_do_not_raise_or_invent_values",
+        "status": "PASS"
+      },
+      {
+        "id": "test_profit_factor_is_not_inf_for_empty_or_all_zero",
+        "case": "test_feature_engineering.FeatureEngineeringTests.test_profit_factor_is_not_inf_for_empty_or_all_zero",
+        "status": "PASS"
+      },
+      {
+        "id": "test_wilder_atr_uses_prior_close_and_needs_period_plus_one_bars",
+        "case": "test_feature_engineering.FeatureEngineeringTests.test_wilder_atr_uses_prior_close_and_needs_period_plus_one_bars",
+        "status": "PASS"
+      },
+      {
+        "id": "test_context_at_drops_unclosed_and_future_bars",
+        "case": "test_original_r1_rules.OriginalR1RulesTests.test_context_at_drops_unclosed_and_future_bars",
+        "status": "PASS"
+      },
+      {
+        "id": "test_future_kline_inside_history_is_rejected",
+        "case": "test_original_r1_rules.OriginalR1RulesTests.test_future_kline_inside_history_is_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_rule_match_never_authorizes_execution",
+        "case": "test_original_r1_rules.OriginalR1RulesTests.test_rule_match_never_authorizes_execution",
+        "status": "PASS"
+      },
+      {
+        "id": "test_breakout_engine_and_evidence_are_absent",
+        "case": "test_package_integrity.PackageIntegrityTests.test_breakout_engine_and_evidence_are_absent",
+        "status": "PASS"
+      },
+      {
+        "id": "test_manifest_hashes_for_present_imported_sources",
+        "case": "test_package_integrity.PackageIntegrityTests.test_manifest_hashes_for_present_imported_sources",
+        "status": "PASS"
+      },
+      {
+        "id": "test_production_allowed_literals_remain_false_in_profile",
+        "case": "test_package_integrity.PackageIntegrityTests.test_production_allowed_literals_remain_false_in_profile",
+        "status": "PASS"
+      }
+    ]
+  },
+  "declared_engine_suite": {
+    "command": "python -B -m unittest -v reports.breakout_continuation_20260919.test_engine reports.breakout_continuation_20260919.test_run reports.breakout_continuation_20260919.test_audit",
+    "expected_tests": 47,
+    "exit_code": 1,
+    "ran": 0,
+    "classification": "UNABLE_TO_RUN_MISSING_MODULES"
+  },
+  "comparison_data_original_claim": "21 tests from tests.test_binance_comparison_data; all 21 pass after removing the pandas import chain"
+}
